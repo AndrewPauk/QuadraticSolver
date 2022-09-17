@@ -6,6 +6,7 @@
 //! @param[in] a Coefficient of x^2 in the equation
 //! @param[in] b Coefficient of x in the equation
 //! @param[in] c Free coefficient of the equation
+//!--------------------------------
 void Input(double *a, double *b, double *c);
 
 //!--------------------------------
