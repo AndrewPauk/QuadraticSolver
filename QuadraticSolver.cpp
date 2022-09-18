@@ -5,6 +5,18 @@
 
 #define EPS 1e-11
 
+void sort2(double *a, double *b)
+{
+    if (*a > *b)
+    {
+        double temp = 0;
+
+        temp = *a;
+        *a = *b;
+        *b = temp;
+    }
+}
+
 int isZero (double n)
 {
     return (fabs(n) < EPS);
@@ -65,8 +77,8 @@ int SolveQuadratic(double a, double b, double c, double *x, double *x1, double *
                     return 0;
                 else
                 {
-                    *x1 = sqrt((-c)/a);
-                    *x2 = (-1)*sqrt((-c)/a);
+                    *x1 = (-1)*sqrt((-c)/a);
+                    *x2 = sqrt((-c)/a);
                     return 2;
                 }
             }
@@ -77,6 +89,7 @@ int SolveQuadratic(double a, double b, double c, double *x, double *x1, double *
             {
                 *x1 = 0;
                 *x2 =(-b)/a;
+                sort2(x1, x2);
                 return 2;
             }
             else
@@ -94,6 +107,7 @@ int SolveQuadratic(double a, double b, double c, double *x, double *x1, double *
                     {
                         *x1 = (-b + discriminant)/(2*a);
                         *x2 = (-b - discriminant)/(2*a);
+                        sort2(x1, x2);
                         return 2;
                     }
                 }

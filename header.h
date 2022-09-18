@@ -13,10 +13,19 @@ void Input(double *a, double *b, double *c);
 //! @brief Used for output of roots
 //! @param[in] nRoots Number of roots of the equation
 //! @param[in] x Root of the equation if one root
-//! @param[in] x1 First, lesser root of the equation
+//! @param[in] x1 First, smaller root of the equation
 //! @param[in] x2 Second, bigger root of the equation
 //!--------------------------------
 void Output(int nRoots, double x, double x1, double x2);
+
+//!--------------------------------
+//! @brief Used to sort two numbers
+//! @param[in] a First number
+//! @param[in] b Second number
+//! @param[out] a Smaller number
+//! @param[out] b Bigger number
+//!--------------------------------
+void sort2(double *x1, double *x2);
 
 //!--------------------------------
 //! @brief Used for comparing double numbers with 0
@@ -45,8 +54,8 @@ int SolveLinear(double b, double c, double *x);
 //! @param[in] b Coefficient of x in the equation
 //! @param[in] c Free term of the equation
 //! @param[out] x Root of the equation if one root
-//! @param[out] x1 First root of the equation if two roots
-//! @param[out] x2 Second root of the equation if two roots
+//! @param[out] x1 Smaller root of the equation if two roots
+//! @param[out] x2 Bigger root of the equation if two roots
 //! @return Number of roots
 //!--------------------------------
 int SolveQuadratic(double a, double b, double c, double *x, double *x1, double *x2);
@@ -59,8 +68,8 @@ int SolveQuadratic(double a, double b, double c, double *x, double *x1, double *
 //! @param[in] c Free term of the equation
 //! @param[in] real_nRoots Number of roots of the equation
 //! @param[in] real_x Root of the equation if one root
-//! @param[in] real_x1 First root of the equation if two roots
-//! @param[in] real_x2 Second root of the equation if two roots
+//! @param[in] real_x1 Smaller root of the equation if two roots
+//! @param[in] real_x2 Bigger root of the equation if two roots
 //!--------------------------------
 void Test(int Test_Number, double a, double b, double c, int real_nRoots, double real_x, double real_x1, double real_x2);
 
