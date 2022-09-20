@@ -5,6 +5,7 @@ void Test(int Test_Number, double a, double b, double c, int real_nRoots, double
 {
     double test_x = 0, test_x1 = 0, test_x2 = 0;
     int test_nRoots = SolveQuadratic(a, b, c, &test_x, &test_x1, &test_x2);
+    sort2(&test_x1, &test_x2);
 
     if ((test_nRoots != real_nRoots) || (!isZero(test_x - real_x)) || (!isZero(test_x1 - real_x1)) || (!isZero(test_x2 - real_x2)))
     {
