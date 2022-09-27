@@ -12,12 +12,12 @@ void Input(double *a, double *b, double *c)
 {
     printf("Enter a, b, c coefficients as in ax^2 + bx + c \n");
 
-    int input = (scanf("%lf %lf %lf", a, b, c)==3);;
+    int input = ((scanf("%lf %lf %lf", a, b, c)==3) * (getchar() == '\n'));
     while(!input)
     {
         BuferDelete();
         printf("Enter error, try again\n");
-        input = (scanf("%lf %lf %lf", a, b, c)==3);
+        input = ((scanf("%lf %lf %lf", a, b, c)==3) * (getchar() == '\n'));
     }
 }
 
