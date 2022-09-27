@@ -60,6 +60,13 @@ int SolveQuadratic(double a, double b, double c, double *x, double *x1, double *
     assert(x1 != NULL);
     assert(x2 != NULL);
 
+    if ((isZero(a) || isZero(b) || isZero(c))  && isfinite(b/a) && isfinite(c/a))
+    {
+        b = b/a;
+        c = c/a;
+        a = 1;
+    }
+
     if (isZero(a))
         return SolveLinear(b, c, x);
     else
